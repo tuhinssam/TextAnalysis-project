@@ -1,0 +1,13 @@
+<a href="{% url 'home' %}">[Start again]</a>
+<h1>Text Analysis</h1> 
+<h3>Complte Text:</h3>
+<b>{{fulltext}}</b>
+<h3>Number of words: {{wordcount}}</h3>
+<h3>Top 5 frequent words:</h3>
+<!--<b>{{top_freqnt_words}}</b>-->
+{% for word, count in top_freqnt_words %}
+ <b>{{word}}:</b> {{count}} <br>
+{% endfor %}
+
+<h3>Sentence Sentiments:</h3>
+<b>{{sentiment_dict}}</b>
